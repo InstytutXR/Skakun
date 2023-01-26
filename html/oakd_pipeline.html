@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>oakd_pipeline API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>oakd_pipeline</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">#!/usr/bin/env python3
+import depthai as dai
+import math
+import numpy
+import cv2
+
+from numpy import mat
+
+from numpy import matrix 
+
+class Oakd_pipeline() :
+    &#34;&#34;&#34; 
+        A oakd interface for multiple pipeline configurations
+    &#34;&#34;&#34;
+
+    def __init__ (self,imuEnabled : bool = False, depthEnabled : bool = False, colorEnabled : bool = False, greyStereoEnabled : bool = False, trackColor : bool = False, trackGrayStereo : bool = False, fps : int = 30, downscaleColor : bool = True) :
+        &#34;&#34;&#34;
+            Create new pipeline that requests the data from oakd device 
+            
+            self.imuEnabled : bool = imuEnabled
+            self.depthEnabled : bool = depthEnabled
+            self.colorEnabled : bool = colorEnabled
+            self.grayStereoEnabled : bool = greyStereoEnabled
+            self.trackColorEnabled : bool = trackColor
+            self.trackStereoEnabled : bool = trackGrayStereo
+            
+        &#34;&#34;&#34;
+        self.imuEnabled : bool = imuEnabled
+        self.depthEnabled : bool = depthEnabled
+        self.colorEnabled : bool = colorEnabled
+        self.grayStereoEnabled : bool = greyStereoEnabled
+        self.trackColorEnabled : bool = trackColor
+        self.trackStereoEnabled : bool = trackGrayStereo
+        
+        self.inputFeatureTrackerConfigQueue = None
+        self.featureTrackerConfig = None
+        
+        
+        self.pipeline = None
+        self.device = None
+        
+        self.latestPacket = {}
+        
+        # Create Oakd_pipeline.pipeline
+        self.pipeline = dai.Pipeline()
+        
+        if(imuEnabled) :
+            self.accOut = None
+            self.rotVectorOut = None
+    
+            # Define sources and outputs
+            imu = self.pipeline.create(dai.node.IMU)
+            xlinkOut = self.pipeline.create(dai.node.XLinkOut)
+            xlinkOut.setStreamName(&#34;imu&#34;)
+            # enable ARVR_STABILIZED_GAME_ROTATION_VECTOR at 100 hz rate
+            imu.enableIMUSensor([dai.IMUSensor.LINEAR_ACCELERATION, dai.IMUSensor.ARVR_STABILIZED_GAME_ROTATION_VECTOR], 100)
+            # above this threshold packets will be sent in batch of X, if the host is not blocked and USB bandwidth is available
+            imu.setBatchReportThreshold(1)
+            # maximum number of IMU packets in a batch, if it&#39;s reached device will block sending until host can receive it
+            # if lower or equal to batchReportThreshold then the sending is always blocking on device
+            # useful to reduce device&#39;s CPU load  and number of lost packets, if CPU load is high on device side due to multiple nodes
+            imu.setMaxBatchReports(28)
+            # Link plugins IMU -&gt; XLINK
+            imu.out.link(xlinkOut.input)
+        
+        if(greyStereoEnabled) :
+            monoResolution = dai.MonoCameraProperties.SensorResolution.THE_400_P
+            # Create pipeline
+            # Define sources and outputs
+            left = self.pipeline.create(dai.node.MonoCamera)
+            right = self.pipeline.create(dai.node.MonoCamera)
+
+            leftOut = self.pipeline.create(dai.node.XLinkOut)
+            rightOut = self.pipeline.create(dai.node.XLinkOut)
+
+            leftOut.setStreamName(&#34;left&#34;)
+
+            rightOut.setStreamName(&#34;right&#34;)
+
+            # Properties
+            left.setResolution(monoResolution)
+            left.setBoardSocket(dai.CameraBoardSocket.LEFT)
+            left.setFps(fps)
+
+            right.setResolution(monoResolution)
+            right.setBoardSocket(dai.CameraBoardSocket.RIGHT)
+            right.setFps(fps)
+
+            # Linking
+            left.out.link(leftOut.input)
+            right.out.link(rightOut.input)
+
+            
+        if(colorEnabled) :
+            
+            camRgb = self.pipeline.create(dai.node.ColorCamera)
+            rgbOut = self.pipeline.create(dai.node.XLinkOut)
+
+            rgbOut.setStreamName(&#34;rgb&#34;)
+            
+            camRgb.setBoardSocket(dai.CameraBoardSocket.RGB)
+            camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+            camRgb.setFps(fps)
+            # downscale color to fit the 800p mono
+            if(downscaleColor) :
+                camRgb.setIspScale(2,3)
+        
+            camRgb.isp.link(rgbOut.input)
+        
+        if(depthEnabled) :
+            # check if we didn&#39;t enabled stereo cameras before
+            if(greyStereoEnabled is not True) :
+                monoResolution = dai.MonoCameraProperties.SensorResolution.THE_400_P
+                left = self.pipeline.create(dai.node.MonoCamera)
+                right = self.pipeline.create(dai.node.MonoCamera)
+
+            self.stereo = self.pipeline.create(dai.node.StereoDepth)
+            depthOut = self.pipeline.create(dai.node.XLinkOut)
+            
+            #&#34;&#34;&#34;
+            left.setResolution(monoResolution)
+            left.setBoardSocket(dai.CameraBoardSocket.LEFT)
+            left.setFps(fps)
+            right.setResolution(monoResolution)
+            right.setBoardSocket(dai.CameraBoardSocket.RIGHT)
+            right.setFps(fps)
+
+            #&#34;&#34;&#34;
+            self.stereo.initialConfig.setConfidenceThreshold(245)
+            self.stereo.initialConfig.setMedianFilter(dai.MedianFilter.KERNEL_5x5)
+            # LR-check is required for depth alignment
+            self.stereo.setLeftRightCheck(True)
+            
+            # align to color if color is present
+            if(colorEnabled) :
+                self.stereo.setDepthAlign(dai.CameraBoardSocket.RGB)
+            
+            depthOut.setStreamName(&#34;depth&#34;)
+            
+            # linking
+            left.out.link(self.stereo.left)
+            right.out.link(self.stereo.right)
+            self.stereo.disparity.link(depthOut.input)
+            # end
+        
+        if(trackColor) :
+            
+            if(colorEnabled) :
+                featureTrackerColor = self.pipeline.create(dai.node.FeatureTracker)
+                xoutPassthroughFrameColor = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesColor = self.pipeline.create(dai.node.XLinkOut)
+                xinTrackedFeaturesConfig = self.pipeline.create(dai.node.XLinkIn)
+
+                xoutPassthroughFrameColor.setStreamName(&#34;passthroughFrameColor&#34;)
+                xoutTrackedFeaturesColor.setStreamName(&#34;trackedFeaturesColor&#34;)
+                xinTrackedFeaturesConfig.setStreamName(&#34;trackedFeaturesConfig&#34;)
+                
+                if (downscaleColor) :
+                    camRgb.video.link(featureTrackerColor.inputImage)
+                else:
+                    camRgb.isp.link(featureTrackerColor.inputImage)
+                    
+            numShaves = 2
+            numMemorySlices = 2
+            featureTrackerColor.setHardwareResources(numShaves, numMemorySlices)
+            featureTrackerConfig = featureTrackerColor.initialConfig.get()
+            
+        if(trackGrayStereo) :
+            if(greyStereoEnabled ) :
+                featureTrackerLeft = self.pipeline.create(dai.node.FeatureTracker)
+                featureTrackerRight = self.pipeline.create(dai.node.FeatureTracker)
+                
+                #xoutPassthroughFrameLeft  = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesLeft   = self.pipeline.create(dai.node.XLinkOut)
+                #xoutPassthroughFrameRight = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesRight  = self.pipeline.create(dai.node.XLinkOut)
+                xinTrackedFeaturesConfig  = self.pipeline.create(dai.node.XLinkIn)
+
+                #xoutPassthroughFrameLeft.setStreamName(&#34;passthroughFrameLeft&#34;)
+                xoutTrackedFeaturesLeft.setStreamName(&#34;trackedFeaturesLeft&#34;)
+                #xoutPassthroughFrameRight.setStreamName(&#34;passthroughFrameRight&#34;)
+                xoutTrackedFeaturesRight.setStreamName(&#34;trackedFeaturesRight&#34;)
+                xinTrackedFeaturesConfig.setStreamName(&#34;trackedFeaturesConfig&#34;)
+
+                left.out.link(featureTrackerLeft.inputImage)
+                #featureTrackerLeft.passthroughInputImage.link(xoutPassthroughFrameLeft.input)
+                featureTrackerLeft.outputFeatures.link(xoutTrackedFeaturesLeft.input)
+                xinTrackedFeaturesConfig.out.link(featureTrackerLeft.inputConfig)
+
+                right.out.link(featureTrackerRight.inputImage)
+                #featureTrackerRight.passthroughInputImage.link(xoutPassthroughFrameRight.input)
+                featureTrackerRight.outputFeatures.link(xoutTrackedFeaturesRight.input)
+                xinTrackedFeaturesConfig.out.link(featureTrackerRight.inputConfig)
+                
+                numShaves = 2
+                numMemorySlices = 2
+                featureTrackerLeft.setHardwareResources(numShaves, numMemorySlices)
+                featureTrackerRight.setHardwareResources(numShaves, numMemorySlices)
+
+                self.featureTrackerConfig = featureTrackerRight.initialConfig.get()
+            else :
+                greyStereoEnabled = True
+        # set the pipeline to the device 
+        self.device = dai.Device(self.pipeline)
+        print(&#34;USB SPEED : &#34;, self.device.getUsbSpeed())
+        #print(self.pipeline.getAllNodes)
+        # Now we get ouput queues according to the streams
+        if (greyStereoEnabled) :
+            self.qLeft = self.device.getOutputQueue(name=&#34;left&#34;, maxSize=4, blocking=False)
+            self.qRight= self.device.getOutputQueue(name=&#34;right&#34;, maxSize=4, blocking=False)
+        
+    def timeDeltaToMilliS(self, delta) -&gt; float:
+                return delta.total_seconds()*1000
+    
+    def getImuData(self, getTimeStamp : bool = False) :
+        &#34;&#34;&#34; Retrieves imu data in form of quaternion representing rotation vector
+
+        Args:
+            getTimeStamp (bool, optional): if true returns timestamp . Defaults to False.
+
+        Returns:
+                [float, float, float, float] : list in form of : real, i, j, k
+        (optional):
+                [float, float, float, float], float : list in form of : real, i, j, k , timestamp
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.imuEnabled :
+                # Output queue for imu bulk packets
+                imuQueue = self.device.getOutputQueue(name=&#34;imu&#34;, maxSize=1, blocking=False)
+                imuData = imuQueue.get()  # blocking call, will wait until a new data has arrived
+                imuPackets = imuData.packets
+                
+                for imuPacket in imuPackets:
+                    rotVector = imuPacket.rotationVector
+                    if(getTimeStamp):
+                        self.rotVecTs = rotVector.timestamp.get()
+                    self.rotVectorOut = [rotVector.real,rotVector.i,rotVector.j,rotVector.k]
+                
+                if(getTimeStamp):    
+                    return self.rotVectorOut, self.rotVecTs
+                else:
+                    return self.rotVectorOut
+    
+    def getGrayFrames(self) :
+        &#34;&#34;&#34;
+            Retrieves pair of left right gray camera views 
+            
+            Returns:
+                [ndarray , ndarray] : gray left frame, gray right frame
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.grayStereoEnabled :
+                
+                inLeft = self.qLeft.tryGet()
+                inRight = self.qRight.tryGet()
+                
+                frameLeft = None
+                frameRight = None
+
+                if inLeft is not None:
+                    frameLeft = inLeft.getCvFrame()
+
+                if inRight is not None:
+                    frameRight = inRight.getCvFrame()
+                    
+                if frameLeft is not None and frameRight is not None:
+                    return [frameLeft, frameRight]
+        
+    def getColorFrames(self) :
+        &#34;&#34;&#34;
+            Gets color frame in CV2 format
+
+        Returns:
+            ndarray : color frame
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.colorEnabled :
+                
+                self.latestPacket[&#34;rgb&#34;] = None
+                colorFrame = None
+                
+                queueEvents =  self.device.getQueueEvents((&#34;rgb&#34;))
+                for queueName in queueEvents:
+                    packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                    if len(packets) &gt; 0:
+                        self.latestPacket[queueName] = packets[-1]
+                if self.latestPacket[&#34;rgb&#34;] is not None:
+                    colorFrame = self.latestPacket[&#34;rgb&#34;].getCvFrame()
+                return colorFrame
+        
+    def getDepthFrames(self) :
+        &#34;&#34;&#34;Gets depth from gray stereo stream
+
+        Returns:
+            ndarray : Depth frame 
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.depthEnabled :
+                
+                self.latestPacket[&#34;depth&#34;] = None
+                depthFrame = None
+                
+                queueEvents =  self.device.getQueueEvents((&#34;depth&#34;))
+                for queueName in queueEvents:
+                    packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                    if len(packets) &gt; 0:
+                        self.latestPacket[queueName] = packets[-1]
+                if self.latestPacket[&#34;depth&#34;] is not None:
+                    depthFrame = self.latestPacket[&#34;depth&#34;].getCvFrame()
+                return depthFrame
+    
+    def getStereoFeatures(self, getPassthroughFrames : bool = False) :
+        &#34;&#34;&#34;Gets feature tracking from stereo camera
+
+        Args:
+            drawPassthroughFrames (bool, optional): Additionally outputs left and right passthrough frame with features drawn onto them. Defaults to False.
+
+        Returns:
+            _type_: _description_
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.trackStereoEnabled :
+                
+                self.outputFeaturesLeftQueue     = self.device.getOutputQueue(&#34;trackedFeaturesLeft&#34;, 8, False)
+                self.outputFeaturesRightQueue    = self.device.getOutputQueue(&#34;trackedFeaturesRight&#34;, 8, False)
+                
+                self.inputFeatureTrackerConfigQueue = self.device.getInputQueue(&#34;trackedFeaturesConfig&#34;)
+                leftKeyPoints, rightKeyPoints = None, None
+                leftFrame, rightFrame = None, None
+                
+                leftKeyPoints = self.outputFeaturesLeftQueue.get().trackedFeatures
+                rightKeyPoints = self.outputFeaturesRightQueue.get().trackedFeatures
+        
+                if getPassthroughFrames :
+                    passthroughImageLeftQueue   = self.device.getOutputQueue(&#34;passthroughFrameLeft&#34;, 8, False)
+                    passthroughImageRightQueue  = self.device.getOutputQueue(&#34;passthroughFrameRight&#34;, 8, False)
+                    
+                    inPassthroughFrameLeft = passthroughImageLeftQueue.tryGet()
+                    inPassthroughFrameRight = passthroughImageRightQueue.tryGet()
+                    
+                    passthroughFrameLeft = inPassthroughFrameLeft.getFrame()
+                    leftFrame = cv2.cvtColor(passthroughFrameLeft, cv2.COLOR_GRAY2BGR)
+                    passthroughFrameRight = inPassthroughFrameRight.getFrame()
+                    rightFrame = cv2.cvtColor(passthroughFrameRight, cv2.COLOR_GRAY2BGR)
+                    
+                    return leftKeyPoints, rightKeyPoints, leftFrame, rightFrame
+                
+                return leftKeyPoints, rightKeyPoints
+            
+    def setFeatureTrackingConfig(self, hwAccelerated : bool = False):
+        &#34;&#34;&#34;Sets the Config of feature tracking optical flow algorithm
+
+        Args:
+            hwAccelerated (bool, optional): Sets the optical flow to HW Accelerated algorithm. Defaults to False.
+        &#34;&#34;&#34;
+        if hwAccelerated :
+            self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.HW_MOTION_ESTIMATION
+            print(&#34;Switching to hardware accelerated motion estimation&#34;)
+
+        else :
+            self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.LUCAS_KANADE_OPTICAL_FLOW
+            print(&#34;Switching to Lucas-Kanade optical flow&#34;)
+        
+        cfg = dai.FeatureTrackerConfig()
+        cfg.set(self.featureTrackerConfig)
+        self.inputFeatureTrackerConfigQueue.send(cfg)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="oakd_pipeline.Oakd_pipeline"><code class="flex name class">
+<span>class <span class="ident">Oakd_pipeline</span></span>
+<span>(</span><span>imuEnabled: bool = False, depthEnabled: bool = False, colorEnabled: bool = False, greyStereoEnabled: bool = False, trackColor: bool = False, trackGrayStereo: bool = False, fps: int = 30, downscaleColor: bool = True)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A oakd interface for multiple pipeline configurations</p>
+<p>Create new pipeline that requests the data from oakd device </p>
+<p>self.imuEnabled : bool = imuEnabled
+self.depthEnabled : bool = depthEnabled
+self.colorEnabled : bool = colorEnabled
+self.grayStereoEnabled : bool = greyStereoEnabled
+self.trackColorEnabled : bool = trackColor
+self.trackStereoEnabled : bool = trackGrayStereo</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Oakd_pipeline() :
+    &#34;&#34;&#34; 
+        A oakd interface for multiple pipeline configurations
+    &#34;&#34;&#34;
+
+    def __init__ (self,imuEnabled : bool = False, depthEnabled : bool = False, colorEnabled : bool = False, greyStereoEnabled : bool = False, trackColor : bool = False, trackGrayStereo : bool = False, fps : int = 30, downscaleColor : bool = True) :
+        &#34;&#34;&#34;
+            Create new pipeline that requests the data from oakd device 
+            
+            self.imuEnabled : bool = imuEnabled
+            self.depthEnabled : bool = depthEnabled
+            self.colorEnabled : bool = colorEnabled
+            self.grayStereoEnabled : bool = greyStereoEnabled
+            self.trackColorEnabled : bool = trackColor
+            self.trackStereoEnabled : bool = trackGrayStereo
+            
+        &#34;&#34;&#34;
+        self.imuEnabled : bool = imuEnabled
+        self.depthEnabled : bool = depthEnabled
+        self.colorEnabled : bool = colorEnabled
+        self.grayStereoEnabled : bool = greyStereoEnabled
+        self.trackColorEnabled : bool = trackColor
+        self.trackStereoEnabled : bool = trackGrayStereo
+        
+        self.inputFeatureTrackerConfigQueue = None
+        self.featureTrackerConfig = None
+        
+        
+        self.pipeline = None
+        self.device = None
+        
+        self.latestPacket = {}
+        
+        # Create Oakd_pipeline.pipeline
+        self.pipeline = dai.Pipeline()
+        
+        if(imuEnabled) :
+            self.accOut = None
+            self.rotVectorOut = None
+    
+            # Define sources and outputs
+            imu = self.pipeline.create(dai.node.IMU)
+            xlinkOut = self.pipeline.create(dai.node.XLinkOut)
+            xlinkOut.setStreamName(&#34;imu&#34;)
+            # enable ARVR_STABILIZED_GAME_ROTATION_VECTOR at 100 hz rate
+            imu.enableIMUSensor([dai.IMUSensor.LINEAR_ACCELERATION, dai.IMUSensor.ARVR_STABILIZED_GAME_ROTATION_VECTOR], 100)
+            # above this threshold packets will be sent in batch of X, if the host is not blocked and USB bandwidth is available
+            imu.setBatchReportThreshold(1)
+            # maximum number of IMU packets in a batch, if it&#39;s reached device will block sending until host can receive it
+            # if lower or equal to batchReportThreshold then the sending is always blocking on device
+            # useful to reduce device&#39;s CPU load  and number of lost packets, if CPU load is high on device side due to multiple nodes
+            imu.setMaxBatchReports(28)
+            # Link plugins IMU -&gt; XLINK
+            imu.out.link(xlinkOut.input)
+        
+        if(greyStereoEnabled) :
+            monoResolution = dai.MonoCameraProperties.SensorResolution.THE_400_P
+            # Create pipeline
+            # Define sources and outputs
+            left = self.pipeline.create(dai.node.MonoCamera)
+            right = self.pipeline.create(dai.node.MonoCamera)
+
+            leftOut = self.pipeline.create(dai.node.XLinkOut)
+            rightOut = self.pipeline.create(dai.node.XLinkOut)
+
+            leftOut.setStreamName(&#34;left&#34;)
+
+            rightOut.setStreamName(&#34;right&#34;)
+
+            # Properties
+            left.setResolution(monoResolution)
+            left.setBoardSocket(dai.CameraBoardSocket.LEFT)
+            left.setFps(fps)
+
+            right.setResolution(monoResolution)
+            right.setBoardSocket(dai.CameraBoardSocket.RIGHT)
+            right.setFps(fps)
+
+            # Linking
+            left.out.link(leftOut.input)
+            right.out.link(rightOut.input)
+
+            
+        if(colorEnabled) :
+            
+            camRgb = self.pipeline.create(dai.node.ColorCamera)
+            rgbOut = self.pipeline.create(dai.node.XLinkOut)
+
+            rgbOut.setStreamName(&#34;rgb&#34;)
+            
+            camRgb.setBoardSocket(dai.CameraBoardSocket.RGB)
+            camRgb.setResolution(dai.ColorCameraProperties.SensorResolution.THE_1080_P)
+            camRgb.setFps(fps)
+            # downscale color to fit the 800p mono
+            if(downscaleColor) :
+                camRgb.setIspScale(2,3)
+        
+            camRgb.isp.link(rgbOut.input)
+        
+        if(depthEnabled) :
+            # check if we didn&#39;t enabled stereo cameras before
+            if(greyStereoEnabled is not True) :
+                monoResolution = dai.MonoCameraProperties.SensorResolution.THE_400_P
+                left = self.pipeline.create(dai.node.MonoCamera)
+                right = self.pipeline.create(dai.node.MonoCamera)
+
+            self.stereo = self.pipeline.create(dai.node.StereoDepth)
+            depthOut = self.pipeline.create(dai.node.XLinkOut)
+            
+            #&#34;&#34;&#34;
+            left.setResolution(monoResolution)
+            left.setBoardSocket(dai.CameraBoardSocket.LEFT)
+            left.setFps(fps)
+            right.setResolution(monoResolution)
+            right.setBoardSocket(dai.CameraBoardSocket.RIGHT)
+            right.setFps(fps)
+
+            #&#34;&#34;&#34;
+            self.stereo.initialConfig.setConfidenceThreshold(245)
+            self.stereo.initialConfig.setMedianFilter(dai.MedianFilter.KERNEL_5x5)
+            # LR-check is required for depth alignment
+            self.stereo.setLeftRightCheck(True)
+            
+            # align to color if color is present
+            if(colorEnabled) :
+                self.stereo.setDepthAlign(dai.CameraBoardSocket.RGB)
+            
+            depthOut.setStreamName(&#34;depth&#34;)
+            
+            # linking
+            left.out.link(self.stereo.left)
+            right.out.link(self.stereo.right)
+            self.stereo.disparity.link(depthOut.input)
+            # end
+        
+        if(trackColor) :
+            
+            if(colorEnabled) :
+                featureTrackerColor = self.pipeline.create(dai.node.FeatureTracker)
+                xoutPassthroughFrameColor = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesColor = self.pipeline.create(dai.node.XLinkOut)
+                xinTrackedFeaturesConfig = self.pipeline.create(dai.node.XLinkIn)
+
+                xoutPassthroughFrameColor.setStreamName(&#34;passthroughFrameColor&#34;)
+                xoutTrackedFeaturesColor.setStreamName(&#34;trackedFeaturesColor&#34;)
+                xinTrackedFeaturesConfig.setStreamName(&#34;trackedFeaturesConfig&#34;)
+                
+                if (downscaleColor) :
+                    camRgb.video.link(featureTrackerColor.inputImage)
+                else:
+                    camRgb.isp.link(featureTrackerColor.inputImage)
+                    
+            numShaves = 2
+            numMemorySlices = 2
+            featureTrackerColor.setHardwareResources(numShaves, numMemorySlices)
+            featureTrackerConfig = featureTrackerColor.initialConfig.get()
+            
+        if(trackGrayStereo) :
+            if(greyStereoEnabled ) :
+                featureTrackerLeft = self.pipeline.create(dai.node.FeatureTracker)
+                featureTrackerRight = self.pipeline.create(dai.node.FeatureTracker)
+                
+                #xoutPassthroughFrameLeft  = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesLeft   = self.pipeline.create(dai.node.XLinkOut)
+                #xoutPassthroughFrameRight = self.pipeline.create(dai.node.XLinkOut)
+                xoutTrackedFeaturesRight  = self.pipeline.create(dai.node.XLinkOut)
+                xinTrackedFeaturesConfig  = self.pipeline.create(dai.node.XLinkIn)
+
+                #xoutPassthroughFrameLeft.setStreamName(&#34;passthroughFrameLeft&#34;)
+                xoutTrackedFeaturesLeft.setStreamName(&#34;trackedFeaturesLeft&#34;)
+                #xoutPassthroughFrameRight.setStreamName(&#34;passthroughFrameRight&#34;)
+                xoutTrackedFeaturesRight.setStreamName(&#34;trackedFeaturesRight&#34;)
+                xinTrackedFeaturesConfig.setStreamName(&#34;trackedFeaturesConfig&#34;)
+
+                left.out.link(featureTrackerLeft.inputImage)
+                #featureTrackerLeft.passthroughInputImage.link(xoutPassthroughFrameLeft.input)
+                featureTrackerLeft.outputFeatures.link(xoutTrackedFeaturesLeft.input)
+                xinTrackedFeaturesConfig.out.link(featureTrackerLeft.inputConfig)
+
+                right.out.link(featureTrackerRight.inputImage)
+                #featureTrackerRight.passthroughInputImage.link(xoutPassthroughFrameRight.input)
+                featureTrackerRight.outputFeatures.link(xoutTrackedFeaturesRight.input)
+                xinTrackedFeaturesConfig.out.link(featureTrackerRight.inputConfig)
+                
+                numShaves = 2
+                numMemorySlices = 2
+                featureTrackerLeft.setHardwareResources(numShaves, numMemorySlices)
+                featureTrackerRight.setHardwareResources(numShaves, numMemorySlices)
+
+                self.featureTrackerConfig = featureTrackerRight.initialConfig.get()
+            else :
+                greyStereoEnabled = True
+        # set the pipeline to the device 
+        self.device = dai.Device(self.pipeline)
+        print(&#34;USB SPEED : &#34;, self.device.getUsbSpeed())
+        #print(self.pipeline.getAllNodes)
+        # Now we get ouput queues according to the streams
+        if (greyStereoEnabled) :
+            self.qLeft = self.device.getOutputQueue(name=&#34;left&#34;, maxSize=4, blocking=False)
+            self.qRight= self.device.getOutputQueue(name=&#34;right&#34;, maxSize=4, blocking=False)
+        
+    def timeDeltaToMilliS(self, delta) -&gt; float:
+                return delta.total_seconds()*1000
+    
+    def getImuData(self, getTimeStamp : bool = False) :
+        &#34;&#34;&#34; Retrieves imu data in form of quaternion representing rotation vector
+
+        Args:
+            getTimeStamp (bool, optional): if true returns timestamp . Defaults to False.
+
+        Returns:
+                [float, float, float, float] : list in form of : real, i, j, k
+        (optional):
+                [float, float, float, float], float : list in form of : real, i, j, k , timestamp
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.imuEnabled :
+                # Output queue for imu bulk packets
+                imuQueue = self.device.getOutputQueue(name=&#34;imu&#34;, maxSize=1, blocking=False)
+                imuData = imuQueue.get()  # blocking call, will wait until a new data has arrived
+                imuPackets = imuData.packets
+                
+                for imuPacket in imuPackets:
+                    rotVector = imuPacket.rotationVector
+                    if(getTimeStamp):
+                        self.rotVecTs = rotVector.timestamp.get()
+                    self.rotVectorOut = [rotVector.real,rotVector.i,rotVector.j,rotVector.k]
+                
+                if(getTimeStamp):    
+                    return self.rotVectorOut, self.rotVecTs
+                else:
+                    return self.rotVectorOut
+    
+    def getGrayFrames(self) :
+        &#34;&#34;&#34;
+            Retrieves pair of left right gray camera views 
+            
+            Returns:
+                [ndarray , ndarray] : gray left frame, gray right frame
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.grayStereoEnabled :
+                
+                inLeft = self.qLeft.tryGet()
+                inRight = self.qRight.tryGet()
+                
+                frameLeft = None
+                frameRight = None
+
+                if inLeft is not None:
+                    frameLeft = inLeft.getCvFrame()
+
+                if inRight is not None:
+                    frameRight = inRight.getCvFrame()
+                    
+                if frameLeft is not None and frameRight is not None:
+                    return [frameLeft, frameRight]
+        
+    def getColorFrames(self) :
+        &#34;&#34;&#34;
+            Gets color frame in CV2 format
+
+        Returns:
+            ndarray : color frame
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.colorEnabled :
+                
+                self.latestPacket[&#34;rgb&#34;] = None
+                colorFrame = None
+                
+                queueEvents =  self.device.getQueueEvents((&#34;rgb&#34;))
+                for queueName in queueEvents:
+                    packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                    if len(packets) &gt; 0:
+                        self.latestPacket[queueName] = packets[-1]
+                if self.latestPacket[&#34;rgb&#34;] is not None:
+                    colorFrame = self.latestPacket[&#34;rgb&#34;].getCvFrame()
+                return colorFrame
+        
+    def getDepthFrames(self) :
+        &#34;&#34;&#34;Gets depth from gray stereo stream
+
+        Returns:
+            ndarray : Depth frame 
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.depthEnabled :
+                
+                self.latestPacket[&#34;depth&#34;] = None
+                depthFrame = None
+                
+                queueEvents =  self.device.getQueueEvents((&#34;depth&#34;))
+                for queueName in queueEvents:
+                    packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                    if len(packets) &gt; 0:
+                        self.latestPacket[queueName] = packets[-1]
+                if self.latestPacket[&#34;depth&#34;] is not None:
+                    depthFrame = self.latestPacket[&#34;depth&#34;].getCvFrame()
+                return depthFrame
+    
+    def getStereoFeatures(self, getPassthroughFrames : bool = False) :
+        &#34;&#34;&#34;Gets feature tracking from stereo camera
+
+        Args:
+            drawPassthroughFrames (bool, optional): Additionally outputs left and right passthrough frame with features drawn onto them. Defaults to False.
+
+        Returns:
+            _type_: _description_
+        &#34;&#34;&#34;
+        if self.device is not None :
+            if self.trackStereoEnabled :
+                
+                self.outputFeaturesLeftQueue     = self.device.getOutputQueue(&#34;trackedFeaturesLeft&#34;, 8, False)
+                self.outputFeaturesRightQueue    = self.device.getOutputQueue(&#34;trackedFeaturesRight&#34;, 8, False)
+                
+                self.inputFeatureTrackerConfigQueue = self.device.getInputQueue(&#34;trackedFeaturesConfig&#34;)
+                leftKeyPoints, rightKeyPoints = None, None
+                leftFrame, rightFrame = None, None
+                
+                leftKeyPoints = self.outputFeaturesLeftQueue.get().trackedFeatures
+                rightKeyPoints = self.outputFeaturesRightQueue.get().trackedFeatures
+        
+                if getPassthroughFrames :
+                    passthroughImageLeftQueue   = self.device.getOutputQueue(&#34;passthroughFrameLeft&#34;, 8, False)
+                    passthroughImageRightQueue  = self.device.getOutputQueue(&#34;passthroughFrameRight&#34;, 8, False)
+                    
+                    inPassthroughFrameLeft = passthroughImageLeftQueue.tryGet()
+                    inPassthroughFrameRight = passthroughImageRightQueue.tryGet()
+                    
+                    passthroughFrameLeft = inPassthroughFrameLeft.getFrame()
+                    leftFrame = cv2.cvtColor(passthroughFrameLeft, cv2.COLOR_GRAY2BGR)
+                    passthroughFrameRight = inPassthroughFrameRight.getFrame()
+                    rightFrame = cv2.cvtColor(passthroughFrameRight, cv2.COLOR_GRAY2BGR)
+                    
+                    return leftKeyPoints, rightKeyPoints, leftFrame, rightFrame
+                
+                return leftKeyPoints, rightKeyPoints
+            
+    def setFeatureTrackingConfig(self, hwAccelerated : bool = False):
+        &#34;&#34;&#34;Sets the Config of feature tracking optical flow algorithm
+
+        Args:
+            hwAccelerated (bool, optional): Sets the optical flow to HW Accelerated algorithm. Defaults to False.
+        &#34;&#34;&#34;
+        if hwAccelerated :
+            self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.HW_MOTION_ESTIMATION
+            print(&#34;Switching to hardware accelerated motion estimation&#34;)
+
+        else :
+            self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.LUCAS_KANADE_OPTICAL_FLOW
+            print(&#34;Switching to Lucas-Kanade optical flow&#34;)
+        
+        cfg = dai.FeatureTrackerConfig()
+        cfg.set(self.featureTrackerConfig)
+        self.inputFeatureTrackerConfigQueue.send(cfg)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="oakd_pipeline.Oakd_pipeline.getColorFrames"><code class="name flex">
+<span>def <span class="ident">getColorFrames</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets color frame in CV2 format</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray </code></dt>
+<dd>color frame</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getColorFrames(self) :
+    &#34;&#34;&#34;
+        Gets color frame in CV2 format
+
+    Returns:
+        ndarray : color frame
+    &#34;&#34;&#34;
+    if self.device is not None :
+        if self.colorEnabled :
+            
+            self.latestPacket[&#34;rgb&#34;] = None
+            colorFrame = None
+            
+            queueEvents =  self.device.getQueueEvents((&#34;rgb&#34;))
+            for queueName in queueEvents:
+                packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                if len(packets) &gt; 0:
+                    self.latestPacket[queueName] = packets[-1]
+            if self.latestPacket[&#34;rgb&#34;] is not None:
+                colorFrame = self.latestPacket[&#34;rgb&#34;].getCvFrame()
+            return colorFrame</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.getDepthFrames"><code class="name flex">
+<span>def <span class="ident">getDepthFrames</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets depth from gray stereo stream</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>ndarray </code></dt>
+<dd>Depth frame</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getDepthFrames(self) :
+    &#34;&#34;&#34;Gets depth from gray stereo stream
+
+    Returns:
+        ndarray : Depth frame 
+    &#34;&#34;&#34;
+    if self.device is not None :
+        if self.depthEnabled :
+            
+            self.latestPacket[&#34;depth&#34;] = None
+            depthFrame = None
+            
+            queueEvents =  self.device.getQueueEvents((&#34;depth&#34;))
+            for queueName in queueEvents:
+                packets =  self.device.getOutputQueue(queueName).tryGetAll()
+                if len(packets) &gt; 0:
+                    self.latestPacket[queueName] = packets[-1]
+            if self.latestPacket[&#34;depth&#34;] is not None:
+                depthFrame = self.latestPacket[&#34;depth&#34;].getCvFrame()
+            return depthFrame</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.getGrayFrames"><code class="name flex">
+<span>def <span class="ident">getGrayFrames</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves pair of left right gray camera views </p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[ndarray , ndarray] </code></dt>
+<dd>gray left frame, gray right frame</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getGrayFrames(self) :
+    &#34;&#34;&#34;
+        Retrieves pair of left right gray camera views 
+        
+        Returns:
+            [ndarray , ndarray] : gray left frame, gray right frame
+    &#34;&#34;&#34;
+    if self.device is not None :
+        if self.grayStereoEnabled :
+            
+            inLeft = self.qLeft.tryGet()
+            inRight = self.qRight.tryGet()
+            
+            frameLeft = None
+            frameRight = None
+
+            if inLeft is not None:
+                frameLeft = inLeft.getCvFrame()
+
+            if inRight is not None:
+                frameRight = inRight.getCvFrame()
+                
+            if frameLeft is not None and frameRight is not None:
+                return [frameLeft, frameRight]</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.getImuData"><code class="name flex">
+<span>def <span class="ident">getImuData</span></span>(<span>self, getTimeStamp: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Retrieves imu data in form of quaternion representing rotation vector</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>getTimeStamp</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>if true returns timestamp . Defaults to False.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>[float, float, float, float] </code></dt>
+<dd>list in form of : real, i, j, k</dd>
+</dl>
+<p>(optional):
+[float, float, float, float], float : list in form of : real, i, j, k , timestamp</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getImuData(self, getTimeStamp : bool = False) :
+    &#34;&#34;&#34; Retrieves imu data in form of quaternion representing rotation vector
+
+    Args:
+        getTimeStamp (bool, optional): if true returns timestamp . Defaults to False.
+
+    Returns:
+            [float, float, float, float] : list in form of : real, i, j, k
+    (optional):
+            [float, float, float, float], float : list in form of : real, i, j, k , timestamp
+    &#34;&#34;&#34;
+    if self.device is not None :
+        if self.imuEnabled :
+            # Output queue for imu bulk packets
+            imuQueue = self.device.getOutputQueue(name=&#34;imu&#34;, maxSize=1, blocking=False)
+            imuData = imuQueue.get()  # blocking call, will wait until a new data has arrived
+            imuPackets = imuData.packets
+            
+            for imuPacket in imuPackets:
+                rotVector = imuPacket.rotationVector
+                if(getTimeStamp):
+                    self.rotVecTs = rotVector.timestamp.get()
+                self.rotVectorOut = [rotVector.real,rotVector.i,rotVector.j,rotVector.k]
+            
+            if(getTimeStamp):    
+                return self.rotVectorOut, self.rotVecTs
+            else:
+                return self.rotVectorOut</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.getStereoFeatures"><code class="name flex">
+<span>def <span class="ident">getStereoFeatures</span></span>(<span>self, getPassthroughFrames: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Gets feature tracking from stereo camera</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>drawPassthroughFrames</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Additionally outputs left and right passthrough frame with features drawn onto them. Defaults to False.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>_type_</code></dt>
+<dd><em>description</em></dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def getStereoFeatures(self, getPassthroughFrames : bool = False) :
+    &#34;&#34;&#34;Gets feature tracking from stereo camera
+
+    Args:
+        drawPassthroughFrames (bool, optional): Additionally outputs left and right passthrough frame with features drawn onto them. Defaults to False.
+
+    Returns:
+        _type_: _description_
+    &#34;&#34;&#34;
+    if self.device is not None :
+        if self.trackStereoEnabled :
+            
+            self.outputFeaturesLeftQueue     = self.device.getOutputQueue(&#34;trackedFeaturesLeft&#34;, 8, False)
+            self.outputFeaturesRightQueue    = self.device.getOutputQueue(&#34;trackedFeaturesRight&#34;, 8, False)
+            
+            self.inputFeatureTrackerConfigQueue = self.device.getInputQueue(&#34;trackedFeaturesConfig&#34;)
+            leftKeyPoints, rightKeyPoints = None, None
+            leftFrame, rightFrame = None, None
+            
+            leftKeyPoints = self.outputFeaturesLeftQueue.get().trackedFeatures
+            rightKeyPoints = self.outputFeaturesRightQueue.get().trackedFeatures
+    
+            if getPassthroughFrames :
+                passthroughImageLeftQueue   = self.device.getOutputQueue(&#34;passthroughFrameLeft&#34;, 8, False)
+                passthroughImageRightQueue  = self.device.getOutputQueue(&#34;passthroughFrameRight&#34;, 8, False)
+                
+                inPassthroughFrameLeft = passthroughImageLeftQueue.tryGet()
+                inPassthroughFrameRight = passthroughImageRightQueue.tryGet()
+                
+                passthroughFrameLeft = inPassthroughFrameLeft.getFrame()
+                leftFrame = cv2.cvtColor(passthroughFrameLeft, cv2.COLOR_GRAY2BGR)
+                passthroughFrameRight = inPassthroughFrameRight.getFrame()
+                rightFrame = cv2.cvtColor(passthroughFrameRight, cv2.COLOR_GRAY2BGR)
+                
+                return leftKeyPoints, rightKeyPoints, leftFrame, rightFrame
+            
+            return leftKeyPoints, rightKeyPoints</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.setFeatureTrackingConfig"><code class="name flex">
+<span>def <span class="ident">setFeatureTrackingConfig</span></span>(<span>self, hwAccelerated: bool = False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Sets the Config of feature tracking optical flow algorithm</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>hwAccelerated</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>Sets the optical flow to HW Accelerated algorithm. Defaults to False.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def setFeatureTrackingConfig(self, hwAccelerated : bool = False):
+    &#34;&#34;&#34;Sets the Config of feature tracking optical flow algorithm
+
+    Args:
+        hwAccelerated (bool, optional): Sets the optical flow to HW Accelerated algorithm. Defaults to False.
+    &#34;&#34;&#34;
+    if hwAccelerated :
+        self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.HW_MOTION_ESTIMATION
+        print(&#34;Switching to hardware accelerated motion estimation&#34;)
+
+    else :
+        self.featureTrackerConfig.motionEstimator.type = dai.FeatureTrackerConfig.MotionEstimator.Type.LUCAS_KANADE_OPTICAL_FLOW
+        print(&#34;Switching to Lucas-Kanade optical flow&#34;)
+    
+    cfg = dai.FeatureTrackerConfig()
+    cfg.set(self.featureTrackerConfig)
+    self.inputFeatureTrackerConfigQueue.send(cfg)</code></pre>
+</details>
+</dd>
+<dt id="oakd_pipeline.Oakd_pipeline.timeDeltaToMilliS"><code class="name flex">
+<span>def <span class="ident">timeDeltaToMilliS</span></span>(<span>self, delta) ‑> float</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def timeDeltaToMilliS(self, delta) -&gt; float:
+            return delta.total_seconds()*1000</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="oakd_pipeline.Oakd_pipeline" href="#oakd_pipeline.Oakd_pipeline">Oakd_pipeline</a></code></h4>
+<ul class="">
+<li><code><a title="oakd_pipeline.Oakd_pipeline.getColorFrames" href="#oakd_pipeline.Oakd_pipeline.getColorFrames">getColorFrames</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.getDepthFrames" href="#oakd_pipeline.Oakd_pipeline.getDepthFrames">getDepthFrames</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.getGrayFrames" href="#oakd_pipeline.Oakd_pipeline.getGrayFrames">getGrayFrames</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.getImuData" href="#oakd_pipeline.Oakd_pipeline.getImuData">getImuData</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.getStereoFeatures" href="#oakd_pipeline.Oakd_pipeline.getStereoFeatures">getStereoFeatures</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.setFeatureTrackingConfig" href="#oakd_pipeline.Oakd_pipeline.setFeatureTrackingConfig">setFeatureTrackingConfig</a></code></li>
+<li><code><a title="oakd_pipeline.Oakd_pipeline.timeDeltaToMilliS" href="#oakd_pipeline.Oakd_pipeline.timeDeltaToMilliS">timeDeltaToMilliS</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

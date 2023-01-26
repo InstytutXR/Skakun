@@ -1,0 +1,8 @@
+panda3d
+opencv-contrib-python
+depthai
+numpy
+math
+scipy
+pillow
+tkinter
