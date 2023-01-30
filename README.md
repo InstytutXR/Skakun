@@ -23,4 +23,11 @@ Current version uses inertial sensor for head tracking and aruco library for anc
 ---
 Current version runs on Python backend and is rendered using Panda3D engine.
 Additional libraries used for image processing and marker detection are Opencv-contrib with Aruco module. Numpy and Scipy for mathematical backend. 
- links 
+
+# Links 
+---
+
+- [Documentation](https://instytutxr.github.io/XRometer/index.html)
+- [Release page](https://instytutxr.github.io/XRometer/index.html)
+- [github page](https://instytutxr.github.io/XRometer/index.html)
+- [Collegium XR page](https://instytutxr.github.io/XRometer/index.html)
