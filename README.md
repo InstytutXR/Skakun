@@ -24,7 +24,7 @@ Current version uses inertial sensor for head tracking and aruco library for anc
 
 ## Printables
 --- 
-
+![Photo of a assembled Skakun XR Moduel](/img/skakun_9.jpg)
 - Screen and sensor enclosure 
 - x-connector attaching screen and sensor to the enclosure
 - additionally the 5x20 any metal screw is needed to secure x-connector
