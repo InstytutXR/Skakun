@@ -24,7 +24,8 @@ Current version uses inertial sensor for head tracking and aruco library for anc
 
 ## Printables
 --- 
-![screenshot of enclosure in 3mf format](/img/enclosure_2.jpg)
+![screenshot of enclosure in 3mf format](/img/enclosure_2.png)
+![screenshot of enclosure in 3mf format](/img/xconnector_2.png)
 - Screen and sensor enclosure 
 - x-connector attaching screen and sensor to the enclosure
 - additionally the 5x20 any metal screw is needed to secure x-connector
