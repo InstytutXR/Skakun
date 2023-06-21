@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>cv2_tracking API documentation</title>
 <meta name="description" content="" />
@@ -105,14 +105,14 @@ class ArucoTracker():
         Detects aruco marker
 
         Args:
-            image (_type_): image to detect the marker on
-            dictionary (_type_): aruco dictionary
-            params (_type_): aruco parameters
-            mtx (_type_): camera matrix
-            dst (_type_): camera distortion coefficent
+            image (NDarray): image to detect the marker on
+            dictionary (NDarray): aruco dictionary
+            params (NDarray): aruco parameters
+            mtx (NDarray): camera matrix
+            dst (NDarray): camera distortion coefficent
 
         Returns:
-            corners, ids, rejected (_type_): returns detected corners of markers and their respective ids
+            corners, ids, rejected (NDarray): returns detected corners of markers and their respective ids
         &#34;&#34;&#34;
         if image is not None:
             (corners, ids, rejected) = cv2.aruco.detectMarkers(
@@ -125,8 +125,8 @@ class ArucoTracker():
 
         Args:
             image (input array): image to draw on
-            corners (_type_): detected corners
-            ids (_type_): ids of detected markers
+            corners (NDarray): detected corners
+            ids (NDarray): ids of detected markers
         &#34;&#34;&#34;
         if len(corners) &gt; 0:
             # Flatten the ArUco IDs list
@@ -167,9 +167,9 @@ class ArucoTracker():
         Gets poses of markers from provided corners and ids
 
         Args:
-            image (_type_): image to paint the 
-            corners (_type_): _description_
-            ids (_type_): _description_
+            image (NDarray): image to paint the 
+            corners (NDarray): _description_
+            ids (NDarray): _description_
             markerLength (int): _description_
         &#34;&#34;&#34;
         if len(corners) &gt; 0:
@@ -378,8 +378,8 @@ def slerp(q1, q2, t):
         &#34;&#34;&#34;_summary_
 
         Args:
-            mtx (nparray): camera matrix
-            dst (nparray): distortion coefficient
+            mtx (NDarray): camera matrix
+            dst (NDarray): distortion coefficient
             interOcularyDistance (float, optional): distance between cameras. Defaults to 0.75.
             aruco_marker_side_Length (float, optional): size of aruco marker. Defaults to 0.07.
         &#34;&#34;&#34;
