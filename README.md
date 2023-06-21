@@ -14,10 +14,26 @@ Current version uses inertial sensor for head tracking and aruco library for anc
 
 - Depth AI OAK-D depth camera with neural processing unit (Series 1 )
 - Chuwi LarkBox Pro micro PC 
-- Powerbank Battery capable of providing at least 90 w of power (12v and 3a) 
+- Powerbank Battery capable of providing at least 90 w of power (12v and 3a)
+- powerbank starter module set for requesting 12v, reference units would be PD2721/IP2721 chip or ZY12PDN mulitester
 - 5.5 inch fullhd hdmi screen from DFRobot
 - 3D printed cover for computer unit and the screen
 - bluetooth controller pad ( optionally )
+
+## Printables
+--- 
+
+- Screen and sensor enclosure 
+- x-connector attaching screen and sensor to the enclosure
+- additionally the 5x20 any metal screw is needed to secure x-connector
+
+## Power for standalone and mobile setup
+--- 
+
+- XR and mobile needs powerbank with the following specs :
+  - 12v and 3a minimum 
+  - adapter with starter module for requesting precise 12v for Chuwi Larkbox Pro (may vary depending on what type the computing unit is being used)
+- Headless setup, without display powered from the same source can work with lower tier powerbank that can provide 12v and 1.5 - 2a .
 
 ## Software
 ---
