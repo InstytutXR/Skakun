@@ -34,6 +34,7 @@ Current version uses inertial sensor for head tracking and aruco library for anc
   - 12v and 3a minimum 
   - adapter with starter module for requesting precise 12v for Chuwi Larkbox Pro (may vary depending on what type the computing unit is being used)
 - Headless setup, without display powered from the same source can work with lower tier powerbank that can provide 12v and 1.5 - 2a .
+- Standalone will work with powerbrick  
 
 ## Software
 ---
