@@ -2,6 +2,8 @@
 ---
 ### OAK-D based Mixed reality construction kit
 
+![Photo of a assembled Skakun XR Moduel](/img/skakun (1).jpg)
+
 ---
 
 This repository holds code for software version of Skakun mixed reality kit.
