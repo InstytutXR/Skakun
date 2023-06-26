@@ -52,6 +52,5 @@ Additional libraries used for image processing and marker detection are Opencv-c
 - [github page](https://github.com/InstytutXR/XRometer)
 - [Collegium XR page](https://instytutxr.github.io/XRometer/index.html)
 
-# Affiliates
 ---
 ![sticker with affiliates logos](/img/afiliates.png)
