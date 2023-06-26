@@ -54,4 +54,4 @@ Additional libraries used for image processing and marker detection are Opencv-c
 
 # Affiliates
 ---
-![screenshot of enclosure in 3mf format](/img/sponsors.png)
+![sticker with affiliates logos](/img/sponsors.pdf)
