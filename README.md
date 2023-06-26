@@ -1,4 +1,4 @@
-# XRometer
+# XRometr
 ---
 ### OAK-D based Mixed reality construction kit
 
@@ -8,7 +8,7 @@
 
 This repository holds code for software version of Skakun mixed reality kit.
 
-XRometer is a fully open source modular mixed reality solution. It is made with researchers, artists and developers in mind. Project provides a base for further incorporation of external sensors and libraries. 
+XRometr is a fully open source modular mixed reality solution. It is made with researchers, artists and developers in mind. Project provides a base for further incorporation of external sensors and libraries. 
 Current version uses inertial sensor for head tracking and aruco library for anchoring digital content to the physical world.  
 
 ## Hardware
