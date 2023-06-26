@@ -2,7 +2,7 @@
 ---
 ### OAK-D based Mixed reality construction kit
 
-![Photo of a assembled Skakun XR Moduel](/img/skakun_1.jpg)
+![Photo of a assembled Skakun XR Moduel](/img/s_1.jpg)
 
 ---
 
