@@ -44,6 +44,22 @@ Current version uses inertial sensor for head tracking and aruco library for anc
 Current version runs on Python backend and is rendered using Panda3D engine.
 Additional libraries used for image processing and marker detection are Opencv-contrib with Aruco module. Numpy and Scipy for mathematical backend. 
 
+# PRINCIPLES OF SUSTAINABILITY 
+---
+## 3D printing matherials:
+
+We use biodegradable filament: 
+B2A-834A1 | F3D FILAMENT Bioflex - 1,75mm 
+or  F3D FILAMENT PLA 1,75MM
+
+## Printing and packaging:
+
+We print only with with eco-responsible produced EBS-260 hand printer our no-waste box for Xrometr
+
+Certificates below: 
+[Eco responsibility](http://www.instytutxr.tk/XRometer/certyfikat/Deklaracja_EBS_260a.pdf)
+[ISO9001_2015_TUV Material utilization](http://www.instytutxr.tk/XRometer/certyfikat/Certyfikat_ISO9001_2015_TUV.pdf)
+
 # Links 
 ---
 
