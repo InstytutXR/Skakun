@@ -57,8 +57,9 @@ or  F3D FILAMENT PLA 1,75MM
 We print only with with eco-responsible produced EBS-260 hand printer our no-waste box for Xrometr
 
 Certificates below: 
-[Eco responsibility](http://www.instytutxr.tk/XRometer/certyfikat/Deklaracja_EBS_260a.pdf)
-[ISO9001_2015_TUV Material utilization](http://www.instytutxr.tk/XRometer/certyfikat/Certyfikat_ISO9001_2015_TUV.pdf)
+
+- [Eco responsibility](http://www.instytutxr.tk/XRometer/certyfikat/Deklaracja_EBS_260a.pdf)
+- [ISO9001_2015_TUV Material utilization](http://www.instytutxr.tk/XRometer/certyfikat/Certyfikat_ISO9001_2015_TUV.pdf)
 
 # Links 
 ---
